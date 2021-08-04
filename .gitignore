@@ -2,7 +2,7 @@
 node_modules
 /dist
 build-storybook.log
-
+storybook-static
 # local env files
 .env.local
 .env.*.local
