@@ -9,17 +9,17 @@
       />
       <span class="checkbox-custom" @click="archiveTask" />
     </label>
-    <div class="title">
+    <div class="title" :title="task.title">
       <input
+        class="input-title"
         type="text"
         :value="task.title"
         readonly
         placeholder="Input title"
-        style="background: red"
       />
     </div>
     <div class="actions">
-      <a v-if="!isChecked" @click="pinTask">
+      <a v-if="!isChecked" @click="pinTask" title="Pin this task">
         <span class="icon-star" />
       </a>
     </div>
@@ -69,3 +69,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+    .input-title {
+        text-overflow: ellipsis;
+    }
+</style>
